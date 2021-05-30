@@ -34,4 +34,7 @@ public class MyHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+    public void delete(SQLiteDatabase db, String valueOf) {
+    }
 }

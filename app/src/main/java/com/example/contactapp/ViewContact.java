@@ -43,6 +43,22 @@ public class ViewContact extends AppCompatActivity {
     }
 
     public void delete(View view) {
+        Intent intent = getIntent();
+        String idString = intent.getStringExtra("id");
+        int id = Integer.valueOf(idString);
+        id++;
+        MyHelper helper = new MyHelper(this);
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from contact",new String[]{});
+        cursor.moveToFirst();
+
+        for (int i = 2;i <= id; i++){
+            cursor.moveToNext();
+        }
+        int _id = cursor.getInt(0);
+        helper.delete(db,String.valueOf(_id));
+        Intent intent1 = new Intent(this,MainActivity.class);
+        startActivity(intent1);
     }
 
     public void edit(View view) {
