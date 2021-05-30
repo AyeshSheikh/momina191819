@@ -1,0 +1,9 @@
+<resources>
+    <string name="my_contacts">My Contact</string>
+    <string name="addcontacts">Add Contact</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="add">Add</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+</resources>
