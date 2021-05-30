@@ -35,6 +35,7 @@ public class MyHelper extends SQLiteOpenHelper {
 
     }
 
-    public void delete(SQLiteDatabase db, String valueOf) {
+    public void delete(SQLiteDatabase db, String id) {
+        db.delete("contact","_id=?",new String[]{id});
     }
 }
