@@ -20,5 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void addContacts(View view) {
+        Intent intent = new Intent(view.getContext(),AddContact.class);
+        intent.putExtra("id",0);
+        startActivity(intent);
     }
 }
