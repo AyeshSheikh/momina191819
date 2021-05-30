@@ -31,6 +31,15 @@ public class ViewContact extends AppCompatActivity {
         SQLiteDatabase db = helper.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from contact",new String[]{});
         cursor.moveToFirst();
+
+        for (int i = 2;i <= id; i++){
+            cursor.moveToNext();
+        }
+
+        name.setText(cursor.getString(1));
+        phone.setText(cursor.getString(2));
+        company.setText(cursor.getString(3));
+        email.setText(cursor.getString(4));
     }
 
     public void delete(View view) {
