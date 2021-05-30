@@ -46,5 +46,13 @@ public class ViewContact extends AppCompatActivity {
     }
 
     public void edit(View view) {
+        Intent intent = getIntent();
+        String idString = intent.getStringExtra("id");
+        int id = Integer.valueOf(idString);
+        id++;
+
+        Intent intent1 = new Intent(view.getContext(),AddContact.class);
+        intent1.putExtra("id",String.valueOf(id));
+        startActivity(intent1);
     }
 }
