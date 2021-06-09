@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                     String id1 = Long.toString(id);
                     Intent intent = new Intent(MainActivity.this,ViewContact.class);
                     intent.putExtra("id",id1);
-                    Log.d("CLICKED_ID",id1);
                     startActivity(intent);
                 }
             });
